@@ -1,0 +1,626 @@
+/* ******RESET***** */
+@font-face {
+  font-family: "Oswald";
+  src: url("/assets/font/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: 'Oswald', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Oswald", sans-serif;
+}
+body {
+  --primary: #ffb700;
+  --OrangeLight: #ffd480;
+  --Secondary: #2a2c2d;
+  --Light: #959595;
+  --Success: #63a464;
+  --docwidth: 90%;
+  font-size: 1rem;
+}
+img,
+input {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+hr {
+  margin: 1rem;
+}
+/* ********HEADER***** */
+
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1rem; */
+  background-color: var(--Secondary);
+  padding: 0.5rem;
+}
+
+.badge {
+  position: absolute;
+  top: 11px;
+  right: 9px;
+  background-color: #ffb700;
+  color: white;
+  font-size: 0.8em;
+  padding: 0px 7px;
+  border-radius: 50%;
+}
+
+#logo {
+  color: white;
+  width: 40%;
+}
+
+#navbar {
+  padding: 0.5rem;
+}
+
+.fa-solid {
+  color: white;
+  margin: 0.5rem;
+}
+
+#navMenu {
+  background-color: #ffb700;
+  height: 7vh;
+}
+
+.numnav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Style général pour le conteneur du menu */
+.numnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style pour le titre 'ALL CATEGORIES' */
+.categories {
+  font-size: 10px;
+  color: #333;
+  background: #ffc107;
+  padding: 2px 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-container {
+  left: 42px;
+  top: 111px;
+  display: block;
+  z-index: 6;
+  position: absolute;
+  display: none;
+}
+
+.menu-item {
+  position: relative; /* Contexte de positionnement pour les sous-menus absolus */
+  /* ... autres styles ... */
+}
+
+.categories i {
+  margin-right: 10px;
+  width: 10%;
+}
+
+.numnav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.menu-container li {
+  background-color: white;
+}
+
+.numnav {
+  padding-top: 1rem;
+}
+.numnav i {
+  color: #333;
+  width: 30px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.numnav li span {
+  color: #333;
+  flex-grow: 1;
+}
+
+.numnav li:hover {
+  background-color: #ffb700;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 1rem;
+  left: 10rem;
+  margin: 1rem;
+}
+
+.sub-menu li {
+  /* padding: 10px 20px; */
+  text-align: start;
+}
+
+.sub-menu-list li {
+  padding: 10px 20px;
+  text-align: start;
+}
+
+.subMenu li:hover {
+  color: white;
+}
+
+.menu-item {
+  padding: 10px 20px;
+}
+.menu-item img {
+  width: 15%;
+}
+
+.categories {
+  background-color: white;
+  color: #2a2c2d;
+  border-radius: 3px;
+}
+.categories .fa-solid {
+  color: #2a2c2d;
+}
+
+.num i {
+  color: white;
+}
+
+.subMenu {
+  display: none;
+  background-color: none;
+}
+
+.num:hover {
+  color: white;
+}
+
+/* **********SLIDER******** */
+
+.mySlides {
+  display: none;
+  animation-name: fade;
+  animation-duration: 1.5s; /* Durée de l'effet de fondu */
+  width: 100%; /* Assure que les slides prennent toute la largeur */
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.showSlide {
+  display: block;
+  opacity: 1;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.text {
+  position: absolute;
+  top: 7.5rem;
+  left: 1rem;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.text h4 {
+  color: #ffb700;
+  font-size: 13px;
+  margin-bottom: 0.3rem;
+  font-weight: 800;
+}
+
+.text h2 {
+  color: #2a2c2d;
+  font-size: 15px;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.text button {
+  background-color: #ffb700;
+  color: white;
+  border: none;
+  height: 34px;
+  width: 86px;
+  font-weight: 700;
+}
+
+/* *********SECTION 1******* */
+.sec1 {
+  padding: 1rem;
+}
+.preSec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.preSec h2 {
+  font-size: 1rem;
+  width: fit-content;
+}
+
+.sec1Menu {
+  display: flex;
+  font-size: 0.8rem;
+}
+
+.sec1Menu li {
+  margin-right: 0.5rem;
+}
+
+.sec1Menu li:hover {
+  color: #ffb700;
+}
+
+.sec1Menu i {
+  color: #ffb700;
+}
+
+.card h4 {
+  text-align: left;
+}
+
+.container {
+  display: flex;
+}
+
+.price-color {
+  color: #ffb700;
+  font-weight: 200;
+}
+
+.container div,
+.container span {
+  margin-right: 0.3rem;
+}
+
+.sale {
+  color: #63a464;
+}
+
+.soldout {
+  background-color: #ffb700;
+  color: white;
+}
+
+.discount {
+  background-color: #63a464;
+  color: white;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 26px;
+  width: 72px;
+  font-weight: 700;
+}
+
+.soldout {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 26px;
+  width: 72px;
+  font-weight: 700;
+}
+
+.barrer {
+  text-decoration: line-through;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card img {
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+}
+
+.card:hover img {
+  opacity: 0.5;
+}
+
+.card:hover {
+  background-color: #333333b3;
+}
+
+.card .shop-now-btn {
+  position: absolute;
+  top: 150px;
+  left: 161px;
+  transform: translateX(-50%);
+  display: none;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.card:hover .shop-now-btn {
+  display: block;
+}
+.starrate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.starrate i {
+  color: #ffb700;
+  margin: 0;
+}
+
+/* *********SECTION 2******* */
+.sec2 h4 {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners img {
+  width: 30%;
+  margin-right: 0.5rem;
+}
+
+.subscribe {
+  background-color: #ffb700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.subscribe h3 {
+  color: white;
+}
+
+.subscription-form {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscription-form input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  font-size: 16px;
+}
+.subscription-form button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.subscription-form input[type="text"]:focus {
+  outline: none;
+}
+
+/* *********FOOTER******* */
+
+footer {
+  background-color: #2a2c2d;
+  color: white;
+  padding: 1rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+}
+
+.contact p {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.contact li {
+  margin-bottom: 1rem;
+}
+
+.contact img {
+  width: 45%;
+  margin-bottom: 1rem;
+}
+
+.insta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin: auto;
+  max-width: 1000px;
+  padding: 10px;
+}
+
+.insta p {
+  grid-column: 1 / -1;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insta img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.fa-brands.fa-square-instagram {
+  font-size: 1.5em;
+  color: #ffb700;
+}
+
+/* ********BREAK POINT******** */
+
+@media screen and (min-width: 576px) {
+  body {
+    max-width: 1200px;
+  }
+  .sec1,
+  .sec2 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  #logo {
+    width: 10%;
+  }
+
+  #adieu {
+    display: none;
+  }
+
+  .categories {
+    font-size: 14px;
+  }
+
+  .badge {
+    right: 160px;
+  }
+  
+  .menu-container {
+    left: 286px;
+    top: 112px;
+  }
+
+  .subMenu {
+    display: flex;
+  }
+
+  .subMenu li {
+    margin-right: 1rem;
+  }
+
+  .text {
+    top: 10rem;
+  }
+
+  .text h2 {
+    font-size: 40px;
+  }
+
+  .text h4 {
+    font-size: 18px;
+  }
+
+  .sec1Menu {
+    font-size: 14px;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 25%;
+    padding: 0.5rem;
+  }
+
+  .card .shop-now-btn {
+    top: 103px;
+    left: 136px;
+  }
+
+  .preSec h2 {
+    font-size: 30px;
+  }
+
+  .preSec h4 {
+    font-size: 30px;
+  }
+
+  .preSec li {
+    font-size: 15px;
+  }
+  .sec2 h4 {
+    font-size: 30px;
+  }
+  .partners {
+    flex-wrap: nowrap;
+  }
+
+  .subscribe {
+    justify-content: center;
+  }
+
+  .footerdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact img {
+    width: 21%;
+  }
+  .contact p {
+    width: 84%;
+  }
+
+  .instaimg {
+    width: calc((100% / 3) - 8px);
+  }
+  .instaimg img {
+    width: 25%;
+    padding: 0.5rem;
+  }
+}
